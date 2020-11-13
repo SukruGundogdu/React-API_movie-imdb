@@ -29,7 +29,7 @@ export const CardList = () => {
         // data mapping 
         <>
         { movieData && movieData.map(movie => {
-            return <Card/>
+            return <Card title={movie.title}/>
         })
             }
         </>
