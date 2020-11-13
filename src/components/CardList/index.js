@@ -20,13 +20,18 @@ export const CardList = () => {
                 query:"Star Wars"   
             }
         })
-        .then((res) => setMovieData(res.data))
+        .then((res) => setMovieData(res.data.results))
         .catch((err) => console.log(err))
     },[]);
     
-    console.log(movieData)
-    // data mapping    
+       
     return (
-        <Card/>
+        // data mapping 
+        <>
+        { movieData && movieData.map(movie => {
+            return <Card/>
+        })
+            }
+        </>
     )
 }
