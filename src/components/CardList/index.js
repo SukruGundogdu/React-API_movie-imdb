@@ -11,8 +11,11 @@ export const CardList = () => {
                <Card 
                 key={index} 
                 title={movie.title}
+                poster_path={
+                    movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                      : "https://a.wattpad.com/cover/229148238-288-k40156.jpg"}
                 id={movie.id}
-                imgSrc={baseImageUrl + movie.poster_path}
+                // imgSrc={baseImageUrl + movie.poster_path}
                 />)
             )}
         </StyledCardList>

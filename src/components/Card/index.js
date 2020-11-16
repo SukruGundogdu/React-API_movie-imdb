@@ -1,12 +1,12 @@
 import { useHistory } from "react-router-dom";
 import {StyledCardWrapper, StyledText, StyledMovieImage} from "./Card.style"
 
-export const Card = ({title, imgSrc, id}) => {
+export const Card = (props) => {
     const history = useHistory();
     return (
-        <StyledCardWrapper onClick={() => history.push(`/detail/${id}`)}>
-            <StyledMovieImage src={imgSrc} alt={"Movie Poster"}/>
-            <StyledText>{title}</StyledText>
+        <StyledCardWrapper onClick={() => history.push(`/detail/${props.id}`)}>
+            <StyledMovieImage src={props.poster_path} alt={"Movie Poster"}/>
+            <StyledText>{props.title}</StyledText>
         </StyledCardWrapper>
     )
 }

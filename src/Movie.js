@@ -7,7 +7,6 @@ import {CardList} from "./components/CardList";
 
 const apiKey = "8aad6bf4ccd0b4b0eee8d8deb8167978"; //temporary
 const baseUrl = "https://api.themoviedb.org/3/search/movie";
-const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 export const MovieContext  = createContext();
 
@@ -31,7 +30,7 @@ function Movie() {
 
   return (
     <div className="App">
-      <MovieContext.Provider value={{ movieList, baseImageUrl, setSearchKeyword }}>
+      <MovieContext.Provider value={{ movieList, setSearchKeyword }}>
           <SearchBox />
           <CardList />
       </MovieContext.Provider>
